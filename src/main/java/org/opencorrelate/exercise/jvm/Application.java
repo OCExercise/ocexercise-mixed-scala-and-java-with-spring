@@ -19,8 +19,9 @@ public class Application implements CommandLineRunner
 
     @Override
     public void run(String... strings) throws Exception {
-        Person p = new Person("Prez");
+        Computer c = new Computer("ticonderoga");
+        Person p = new Person("Prez", c);
         
-        log.info(p.toString());
+        log.info("{} is running this on his computer named {}.", p, p.computer());
     }
 }
